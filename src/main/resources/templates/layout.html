@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:fragment="template (content)">
+<head>
+    <meta charset="UTF-8">
+    <title>Trip Planner</title>
+    <link rel="stylesheet" th:href="@{/css/uikit.min.css}">
+
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="https://kit.fontawesome.com/8c216901d9.js" crossorigin="anonymous"></script>
+    <style>
+        .p1 {
+            font-family:"Monotype Corsiva";}
+    </style>
+</head>
+<body>
+
+<div class="uk-container uk-container-large"> </div>
+<a th:replace="~{navigation :: nav}"></a>
+<a th:replace="${content}"></a>
+
+</body>
+</html>
