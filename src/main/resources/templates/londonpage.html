@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: template (~{:: .uk-section})}"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+</head>
+<body>
+
+<div class="uk-section">
+
+    <div class="uk-card uk-card-hover uk-card-body uk-position-fixed" style="top: 150px; width:200px">
+        <ul class="uk-nav-default uk-navbar-left" uk-nav>
+            <li><a href="#">Zabytki w Londynie:</a></li>
+            <li><a href="#bigben">Big Ben</a></li>
+            <li><a href="#eye">London Eye</a></li>
+            <li><a href="#palace">Buckingham Palace</a></li>
+            <li><a href="#bridge">Tower Bridge</a></li>
+        </ul>
+    </div>
+
+    <div class="uk-position-top-center" style="top: 100px">
+
+        <div class="uk-container uk-container-small">
+
+            <article class="uk-article uk-margin-large uk-text-center">
+                <a name="bigben"></a>
+                <h1 class="uk-article-title">Big Ben</h1>
+                <p>Big Ben - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto asperiores blanditiis dolorum enim hic impedit ipsam laudantium magnam neque nulla obcaecati, optio provident qui, sapiente sit sunt totam, ut veniam voluptatibus. Asperiores aut autem cupiditate eligendi et facere iste nostrum placeat quisquam, quos reprehenderit sapiente sequi sint temporibus veniam.</p>
+            </article>
+            <div class="uk-cover-container uk-height-large uk-margin-small">
+                <img th:src="@{/img/bigben.jfif}" alt="">
+            </div>
+            <article class="uk-article uk-margin-large uk-text-center">
+                <a name="eye"></a>
+                <h1 class="uk-article-title">London Eye</h1>
+                <p>London Eye - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto asperiores blanditiis dolorum enim hic impedit ipsam laudantium magnam neque nulla obcaecati, optio provident qui, sapiente sit sunt totam, ut veniam voluptatibus. Asperiores aut autem cupiditate eligendi et facere iste nostrum placeat quisquam, quos reprehenderit sapiente sequi sint temporibus veniam.</p>
+            </article>
+            <div class="uk-cover-container uk-height-large uk-margin-small">
+                <img th:src="@{/img/londoneye.jpg}" alt="">
+            </div>
+            <article class="uk-article uk-margin-large uk-text-center">
+                <a name="palace"></a>
+                <h1 class="uk-article-title">Buckingham Palace</h1>
+                <p>Buckingham Palace - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto asperiores blanditiis dolorum enim hic impedit ipsam laudantium magnam neque nulla obcaecati, optio provident qui, sapiente sit sunt totam, ut veniam voluptatibus. Asperiores aut autem cupiditate eligendi et facere iste nostrum placeat quisquam, quos reprehenderit sapiente sequi sint temporibus veniam.</p>
+            </article>
+            <div class="uk-cover-container uk-height-large uk-margin-small">
+                <img th:src="@{/img/palace.jpg}" alt="">
+            </div>
+            <article class="uk-article uk-margin-large uk-text-center">
+                <a name="bridge"></a>
+                <h1 class="uk-article-title">Tower Bridge</h1>
+                <p>Tower Bridge - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto asperiores blanditiis dolorum enim hic impedit ipsam laudantium magnam neque nulla obcaecati, optio provident qui, sapiente sit sunt totam, ut veniam voluptatibus. Asperiores aut autem cupiditate eligendi et facere iste nostrum placeat quisquam, quos reprehenderit sapiente sequi sint temporibus veniam.</p>
+            </article>
+            <div class="uk-cover-container uk-height-large uk-margin-small">
+                <img th:src="@{/img/towerbridge.jpeg}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
