@@ -15,13 +15,6 @@ public class GuideEntity {
     @JoinColumn(name = "city_id")
     private CityEntity city;
 
-    public GuideEntity(Integer id, String name, String language, CityEntity city) {
-        this.id = id;
-        this.name = name;
-        this.language = language;
-        this.city = city;
-    }
-
     public Integer getId() {
         return id;
     }

@@ -18,13 +18,6 @@ public class MonumentEntity {
     @JoinColumn(name = "city_id")
     private CityEntity city;
 
-    public MonumentEntity(Integer id, String name, BigDecimal price, Integer visitingTime, Set<CityEntity> city) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.visitingTime = visitingTime;
-        this.city = (CityEntity) city;
-    }
 
     public Integer getId() {
         return id;

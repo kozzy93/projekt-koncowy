@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: template (~{:: .uk-section})}"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+</head>
+<body>
+
+<div class="uk-section">
+
+    <div class="uk-container uk-container-small uk-position-center">
+
+    <h2>Zaznacz zabytki które chcesz zwiedzić:</h2>
+
+        <form th:object="${orderAddress}" method="post" th:href="@{/order/1}">
+            <fieldset class="uk-fieldset">
+
+    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+        <label th:each="monumentsRow : ${monuments}"><input class="uk-checkbox" type="checkbox" checked name="monumentOrder" th:value="${monumentsRow.name}"><div th:text="${monumentsRow.name}"></div></label>
+    </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-select" style="font-size: x-large" >Wybierz przewodnika oraz język zwiedzania:</label>
+                <div class="uk-form-controls" style="width: 400px">
+                    <select class="uk-select" id="form-stacked-select" name="guide">
+                        <option th:each="guidesRow : ${guides}" ><div th:text="${guidesRow.name + ' - język zwiedzania: ' + guidesRow.language}"></div></option>
+                    </select>
+                </div>
+            </div>
+            <p style="font-size: x-large">Wypełnij formularz:</p>
+
+            <div class="uk-margin">
+                <input class="uk-input uk-form-width-medium" type="text" placeholder="Imię" th:field="*{firstName}">
+            </div>
+
+            <div class="uk-margin">
+                <input class="uk-input uk-form-width-medium" type="text" placeholder="Nazwisko" th:field="*{lastName}">
+            </div>
+
+            <div class="uk-margin">
+                <input class="uk-input uk-form-width-medium" type="text" placeholder="Ulica" th:field="*{street}">
+            </div>
+
+            <div class="uk-margin">
+                <input class="uk-input uk-form-width-medium" type="text" placeholder="Kod pocztowy" th:field="*{postalCode}">
+            </div>
+
+            <div class="uk-margin">
+                <input class="uk-input uk-form-width-medium" type="text" placeholder="Miasto" th:field="*{city}">
+            </div>
+
+                <div class="uk-margin">
+                    <input type="text" id="datepicker" name="datepicker" />
+                </div>
+
+                <script>
+                    $(function() {
+                        $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
+                        $( "#datepicker" ).datepicker({
+                            onSelect: function (dateText, inst) {
+                                $(this).parent('form').submit();
+                            }
+                        });
+                    });
+                </script>
+
+            <div class="uk-width-1-1">
+                <input type="submit" class="uk-button uk-button-primary uk-width-1-1" value="Zamów">
+            </div>
+
+
+
+        </fieldset>
+    </form>
+        </div>
+
+</div>
+</body>
+</html>

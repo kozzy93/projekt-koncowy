@@ -1,9 +1,6 @@
 package pl.edu.wszib.projektkoncowy.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Cities")
@@ -12,12 +9,9 @@ public class CityEntity {
     @Id
     @GeneratedValue
     private Integer id;
+    @Column(name = "city_name")
     private String cityName;
 
-    public CityEntity(Integer id, String cityName) {
-        this.id = id;
-        this.cityName = cityName;
-    }
 
     public Integer getId() {
         return id;
