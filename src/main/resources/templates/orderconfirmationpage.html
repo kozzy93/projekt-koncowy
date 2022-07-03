@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: template (~{:: .uk-section})}"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+</head>
+<body>
+
+<div class="uk-section">
+    <div class="uk-container uk-container-small"></div>
+    <div class="uk-text-center">
+<h1 class="uk-heading">Twoje zamówienie zostało przyjęte!</h1>
+        <div th:each="ordersRow : ${orders}" ><a th:href="@{http://google.pl/maps/dir/{blabla}(blabla=${ordersRow.monuments})}">Zobacz w mapach google planowaną trasę wycieczki</a></div>
+    </div>
+</div>
+</div>
+</body>
+</html>

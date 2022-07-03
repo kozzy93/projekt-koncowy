@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.*;
 import pl.edu.wszib.dao.CityDao;
 import pl.edu.wszib.dao.GuideDao;
 import pl.edu.wszib.dao.MonumentDao;
-import pl.edu.wszib.projektkoncowy.model.GuideEntity;
-import pl.edu.wszib.projektkoncowy.model.MonumentEntity;
-import pl.edu.wszib.projektkoncowy.model.OrderAddressModel;
+import pl.edu.wszib.dao.OrderDao;
+import pl.edu.wszib.projektkoncowy.model.*;
 import pl.edu.wszib.service.GuideService;
 import pl.edu.wszib.service.OrderService;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Controller
@@ -66,11 +66,19 @@ public class OrderController {
     }
 
     @PostMapping({"/order", "/order/{cityid}"})
-    public String processTripOrder(@PathVariable(required = false) Integer cityid,
-                                   @ModelAttribute("orderAddress") OrderAddressModel orderAddress) {
+    public String processTripOrder(@ModelAttribute("orderAddress") OrderAddressModel orderAddress) {
 
-        orderService.saveOrder(cityid, orderAddress);
 
-        return "redirect:/monuments";
+        try {
+            orderService.checkGuide(orderAddress);
+        } catch (Exception e) {
+           return "redirect:/errorpage";
+        }
+
+        orderService.saveOrder(orderAddress);
+
+        Integer orderId = orderService.changeOrderId(orderAddress);
+
+        return "redirect:/confirmation/" + orderId;
     }
 }

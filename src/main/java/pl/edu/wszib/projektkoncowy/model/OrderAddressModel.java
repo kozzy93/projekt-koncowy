@@ -1,5 +1,7 @@
 package pl.edu.wszib.projektkoncowy.model;
 
+import java.util.Objects;
+
 public class OrderAddressModel {
 
     private String firstName;
@@ -15,6 +17,51 @@ public class OrderAddressModel {
     private String guide;
 
     private String monumentOrder;
+
+    private String visitingDate;
+
+    private String visitingTime;
+
+    private String phoneNumber;
+
+    private Integer orderId;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        OrderAddressModel that = (OrderAddressModel) o;
+        return Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(street, that.street) && Objects.equals(postalCode, that.postalCode) && Objects.equals(city, that.city) && Objects.equals(guide, that.guide) && Objects.equals(monumentOrder, that.monumentOrder) && Objects.equals(visitingDate, that.visitingDate) && Objects.equals(visitingTime, that.visitingTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, street, postalCode, city, guide, monumentOrder, visitingDate, visitingTime);
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getVisitingDate() {
+        return visitingDate;
+    }
+
+    public void setVisitingDate(String visitingDate) {
+        this.visitingDate = visitingDate;
+    }
+
+    public String getVisitingTime() {
+        return visitingTime;
+    }
+
+    public void setVisitingTime(String visitingTime) {
+        this.visitingTime = visitingTime;
+    }
 
     public String getMonumentOrder() {
         return monumentOrder;
@@ -70,5 +117,13 @@ public class OrderAddressModel {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 }

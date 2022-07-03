@@ -12,7 +12,7 @@ VALUES (1, 'polski', 'Jan Kowalski', 1),
        (6, 'angielski', 'Marian Kot', 3);
 
 INSERT INTO monuments (id, name, price, visiting_time, city_id)
-VALUES (1, 'Koloseum', 80, 90, 1),
+VALUES (1, 'Koloseum w Rzymie', 80, 90, 1),
        (2, 'Fontanna di Trevi', 30, 40, 1),
        (3, 'Watykan', 100, 150, 1),
        (4, 'Forum Romanum', 60, 80, 1),

@@ -1,7 +1,6 @@
 package pl.edu.wszib.projektkoncowy.model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "orders")
@@ -11,9 +10,17 @@ public class OrderEntity {
     @GeneratedValue
     private Integer id;
 
-    private String guideName;
+    public String guideName;
 
-    private Date visitingDate;
+    private String visitingDate;
+
+    private String visitingTime;
+
+    private String guideTimeDate;
+
+    private String monuments;
+
+    private String phoneNumber;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_address_id")
@@ -35,11 +42,19 @@ public class OrderEntity {
         this.guideName = guideName;
     }
 
-    public Date getVisitingDate() {
+    public String getVisitingDate() {
         return visitingDate;
     }
 
-    public void setVisitingDate(Date visitingDate) {
+    public String getVisitingTime() {
+        return visitingTime;
+    }
+
+    public void setVisitingTime(String visitingTime) {
+        this.visitingTime = visitingTime;
+    }
+
+    public void setVisitingDate(String visitingDate) {
         this.visitingDate = visitingDate;
     }
 
@@ -50,4 +65,29 @@ public class OrderEntity {
     public void setOrderAddress(OrderAddressEntity orderAddress) {
         this.orderAddress = orderAddress;
     }
+
+    public String getGuideTimeDate() {
+        return guideTimeDate;
+    }
+
+    public void setGuideTimeDate(String guideTimeDate) {
+        this.guideTimeDate = guideTimeDate;
+    }
+
+    public String getMonuments() {
+        return monuments;
+    }
+
+    public void setMonuments(String monuments) {
+        this.monuments = monuments;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }
+

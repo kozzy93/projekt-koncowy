@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "orderaddress")
@@ -28,6 +26,36 @@ public class OrderAddressEntity {
     private String guide;
 
     private String monumentOrder;
+
+    private String visitingDate;
+
+    private String visitingTime;
+
+    private String phoneNumber;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getVisitingDate() {
+        return visitingDate;
+    }
+
+    public void setVisitingDate(String visitingDate) {
+        this.visitingDate = visitingDate;
+    }
+
+    public String getVisitingTime() {
+        return visitingTime;
+    }
+
+    public void setVisitingTime(String visitingTime) {
+        this.visitingTime = visitingTime;
+    }
 
     public String getMonumentOrder() {
         return monumentOrder;
