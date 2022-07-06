@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Trip Planner</title>
     <link rel="stylesheet" th:href="@{/css/uikit.min.css}">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
@@ -15,22 +15,25 @@
     <style>
 
         .p1 {
-            font-family:"Monotype Corsiva";}
+            font-family: "Monotype Corsiva";
+        }
 
-        .puncture{
+        .puncture {
             display: block;
             width: 274px;
             height: 593px;
             position: relative;
         }
-        .puncture img{
+
+        .puncture img {
             display: block;
             width: 100%;
             height: auto;
         }
-        .puncture[picturetext]:after{
+
+        .puncture[picturetext]:after {
             content: attr(picturetext);
-            background-color: rgba(188, 186, 186,.5);
+            background-color: rgba(188, 186, 186, .5);
             display: none;
             position: absolute;
             top: 0;
@@ -41,11 +44,12 @@
             padding: 30% 10%;
             color: black;
         }
-        .puncture:hover:after{
+
+        .puncture:hover:after {
             display: block;
         }
 
-        .imgbutton{
+        .imgbutton {
             display: none;
             width: 100%;
         }
@@ -61,7 +65,7 @@
 </head>
 <body>
 
-<div class="uk-container uk-container-large"> </div>
+<div class="uk-container uk-container-large"></div>
 <a th:replace="~{navigation :: nav}"></a>
 <a th:replace="${content}"></a>
 

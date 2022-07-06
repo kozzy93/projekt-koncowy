@@ -2,7 +2,6 @@ package pl.edu.wszib.projektkoncowy.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Set;
 
 @Entity
 @Table(name = "Monuments")
@@ -17,7 +16,6 @@ public class MonumentEntity {
     @OneToOne
     @JoinColumn(name = "city_id")
     private CityEntity city;
-
 
     public Integer getId() {
         return id;

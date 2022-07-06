@@ -1,28 +1,30 @@
 package pl.edu.wszib.projektkoncowy.model;
 
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 public class OrderAddressModel {
 
+    @Size(min = 2, max = 25)
     private String firstName;
-
+    @Size(min = 2, max = 25)
     private String lastName;
-
+    @Size(min = 2, max = 30)
     private String street;
-
+    @Size(min = 6, max = 6)
     private String postalCode;
-
+    @Size(min = 2, max = 25)
     private String city;
-
-    private String guide;
-
-    private String monumentOrder;
-
+    @Size(min = 11, max = 11)
+    private String phoneNumber;
+    @Size(min = 10, max = 10)
     private String visitingDate;
 
     private String visitingTime;
 
-    private String phoneNumber;
+    private String guide;
+
+    private String monumentOrder;
 
     private Integer orderId;
 

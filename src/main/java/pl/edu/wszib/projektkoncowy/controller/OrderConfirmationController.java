@@ -21,13 +21,13 @@ public class OrderConfirmationController {
     }
 
     @GetMapping({"/confirmation", "/confirmation/{orderid}"})
-    public String showConfirmationPage(@PathVariable(required = false)Integer orderid, Model model) {
+    public String showConfirmationPage(@PathVariable(required = false) Integer orderid, Model model) {
         if (orderid != null) {
             List<OrderEntity> orders = orderDao.findAllById(orderid);
             model.addAttribute("orders", orders);
             return "orderconfirmationpage";
 
-    }
+        }
         return "orderconfirmationpage";
     }
 }

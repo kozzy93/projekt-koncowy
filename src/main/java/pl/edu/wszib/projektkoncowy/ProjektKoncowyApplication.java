@@ -12,8 +12,8 @@ import org.springframework.context.annotation.PropertySource;
 @EntityScan("pl.edu.wszib.*")
 public class ProjektKoncowyApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProjektKoncowyApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ProjektKoncowyApplication.class, args);
+    }
 
 }

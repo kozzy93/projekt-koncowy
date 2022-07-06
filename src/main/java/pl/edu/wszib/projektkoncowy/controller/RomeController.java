@@ -9,5 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RomeController {
 
     @GetMapping
-    public String showRomePage() { return "romepage";}
+    public String showRomePage() {
+        return "romepage";
+    }
 }

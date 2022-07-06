@@ -5,9 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.edu.wszib.dao.OrderAddressDao;
-import pl.edu.wszib.dao.OrderDao;
 import pl.edu.wszib.projektkoncowy.model.OrderAddressEntity;
-import pl.edu.wszib.projektkoncowy.model.OrderEntity;
 
 import java.util.List;
 
@@ -22,7 +20,7 @@ public class AdminController {
     }
 
     @GetMapping
-    public String showAdminPage(Model model){
+    public String showAdminPage(Model model) {
         List<OrderAddressEntity> orderaddress = orderAddressDao.findAll();
         model.addAttribute("orders", orderaddress);
         return "adminpage";

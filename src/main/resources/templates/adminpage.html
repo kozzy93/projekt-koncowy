@@ -14,8 +14,9 @@
                 <td class="uk-flex uk-flex-column">
                     <div class="uk-text-normal" th:text="${order.getFirstName() +' '+ order.getLastName()}"></div>
                     <div class="uk-text-lighter uk-text-small" th:text="${order.getStreet()}"></div>
-                    <div class="uk-text-lighter uk-text-small" th:text="${order.getPostalCode() +' '+ order.getCity()}" ></div>
-                    <div class="uk-text-lighter uk-text-small" th:text="${order.getPhoneNumber()}" ></div>
+                    <div class="uk-text-lighter uk-text-small"
+                         th:text="${order.getPostalCode() +' '+ order.getCity()}"></div>
+                    <div class="uk-text-lighter uk-text-small" th:text="${order.getPhoneNumber()}"></div>
                 </td>
                 <td class="uk-width-1-3">
                     <div class="uk-text-bold uk-margin-small" th:text="${order.guide}"></div>

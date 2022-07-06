@@ -9,5 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LondonController {
 
     @GetMapping
-    public String showLondonPage() { return "londonpage";}
+    public String showLondonPage() {
+        return "londonpage";
+    }
 }

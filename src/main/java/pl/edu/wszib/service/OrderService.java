@@ -9,9 +9,7 @@ import pl.edu.wszib.mappers.OrderAddressMapper;
 import pl.edu.wszib.projektkoncowy.model.OrderAddressEntity;
 import pl.edu.wszib.projektkoncowy.model.OrderAddressModel;
 import pl.edu.wszib.projektkoncowy.model.OrderEntity;
-
 import javax.transaction.Transactional;
-
 
 @Service
 public class OrderService {
@@ -32,6 +30,7 @@ public class OrderService {
     public OrderDao getOrderDao() {
         return orderDao;
     }
+
     private Integer orderId;
 
     @Transactional
@@ -53,21 +52,21 @@ public class OrderService {
         orderId = orderEntity.getId();
     }
 
-    public Integer changeOrderId(OrderAddressModel orderAddressModel){
+    public Integer changeOrderId(OrderAddressModel orderAddressModel) {
         orderAddressModel.setOrderId(orderId);
         return orderAddressModel.getOrderId();
     }
 
 
     public void checkGuide(OrderAddressModel orderAddressModel) throws ResponseStatusException {
-        if (guideExist(orderAddressModel.getGuide() + orderAddressModel.getVisitingTime() + orderAddressModel.getVisitingDate())== false){
+        if (guideExist(orderAddressModel.getGuide() + orderAddressModel.getVisitingTime() + orderAddressModel.getVisitingDate()) == false) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
     }
 
-    private boolean guideExist(String guideTimeDate){
+    private boolean guideExist(String guideTimeDate) {
         if (orderDao.findByGuideTimeDate(guideTimeDate) != null)
-        return false;
+            return false;
         else return true;
     }
 

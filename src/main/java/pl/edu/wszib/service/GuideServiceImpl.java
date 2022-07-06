@@ -5,14 +5,11 @@ import org.springframework.stereotype.Service;
 import pl.edu.wszib.dao.GuideDao;
 import pl.edu.wszib.projektkoncowy.model.GuideEntity;
 
-import java.util.List;
-
 @Service
-public class GuideServiceImpl implements GuideService{
+public class GuideServiceImpl implements GuideService {
 
     @Autowired
     private GuideDao guideDao;
-
 
     @Override
     public GuideEntity save(GuideEntity guideEntity) {

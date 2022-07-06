@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class OrderExceptionController {
 
     @GetMapping
-    public String showErrorPage(){
+    public String showErrorPage() {
         return "orderexception";
     }
 }
