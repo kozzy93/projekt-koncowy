@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MonumentsController {
 
     @GetMapping
-    public String showMonumentsPage(){
+    public String showMonumentsPage() {
         return "monuments";
     }
 }

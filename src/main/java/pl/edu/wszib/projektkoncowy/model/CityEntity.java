@@ -12,7 +12,6 @@ public class CityEntity {
     @Column(name = "city_name")
     private String cityName;
 
-
     public Integer getId() {
         return id;
     }

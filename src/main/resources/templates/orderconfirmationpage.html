@@ -12,6 +12,7 @@
         <div th:each="ordersRow : ${orders}"><a
                 th:href="@{http://google.pl/maps/dir/{maps}(maps=${ordersRow.monuments})}">Zobacz w mapach google
             planowaną trasę wycieczki</a></div>
+        <div class="uk-position-relative" style="top: 50px"><img th:src="@{/img/like.jfif}" alt=""></div>
     </div>
 </div>
 </div>

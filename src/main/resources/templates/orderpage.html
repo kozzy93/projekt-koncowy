@@ -8,24 +8,28 @@
 
 <div class="uk-section">
     <div class="uk-container uk-container-small">
-        <h1 class="uk-heading">Wycieczkę w którym mieście chcesz zamówić?</h1>
+        <h1 class="uk-heading uk-text-center">Które miasto chcesz zwiedzić?</h1>
 
         <div class="uk-position-center">
-            <div class="uk-position-relative" style="right: 400px; bottom: 100px">
-                <p class="uk-text-bold"><a class th:href="@{/order/1}">Rzym</a></p>
-                <i class="fa-solid fa-landmark" style="font-size: xxx-large; color: black"></i>
+            <div class="uk-position-relative" style="right: 400px; top: 50px">
+                <p class="uk-text-bold uk-text-center"><a class th:href="@{/order/1}"
+                                                          style="font-size: x-large">Rzym</a></p>
+                <i class="fa-solid fa-landmark" style="font-size: 150px; color: black"></i>
+            </div>
+        </div>
+
+        <div class="uk-position-center" style="z-index: 2">
+            <div class="uk-position-relative" style="top: 50px">
+                <p class="uk-text-bold uk-text-center"><a class th:href="@{/order/2}"
+                                                          style="font-size: x-large">Paryż</a></p>
+                <i class="fa-solid fa-archway" style="font-size: 150px; color: black"></i>
             </div>
         </div>
         <div class="uk-position-center">
-            <div class="uk-position-relative" style="bottom: 100px">
-                <p class="uk-text-bold"><a class th:href="@{/order/2}">Paryż</a></p>
-                <i class="fa-solid fa-archway" style="font-size: xxx-large; color: black"></i>
-            </div>
-        </div>
-        <div class="uk-position-center">
-            <div class="uk-position-relative" style="left: 400px; bottom: 100px">
-                <p class=" uk-text-bold"><a class th:href="@{/order/3}">Londyn</a></p>
-                <i class="fa-solid fa-crown" style="font-size: xxx-large; color: black"></i>
+            <div class="uk-position-relative" style="left: 400px; top: 50px">
+                <p class="uk-text-bold uk-text-center"><a class th:href="@{/order/3}"
+                                                          style="font-size: x-large">Londyn</a></p>
+                <i class="fa-solid fa-crown" style="font-size: 150px; color: black"></i>
             </div>
         </div>
     </div>
