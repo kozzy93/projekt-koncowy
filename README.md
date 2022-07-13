@@ -19,7 +19,8 @@ Opis:
 <br> • Potwierdzenie poprawnego dokonania rezerwacji
 <br> • Strona admina z listą złożonych zamówień
 <br>
-<br>Aby połączyć się z bazą danych należy w katalogu resources zmienić nazwę pliku z 'db-template.properties' na 'db.properties' oraz uzupełnić go swoimi danymi. Aplikacja łączy się z bazą danych w MS Sql.
+<br>Aplikacja łączy się z bazą danych PostgreSQL.
+Aby połączyć się z bazą danych MS SQL należy w katalogu resources zmienić nazwę pliku z 'db-template.properties' na 'db.properties' oraz uzupełnić go swoimi danymi, w pliku pom.xml odkomentować biblioteki związane z MS SQL i zakomentować te związane z postgresem, w pliku application.properties zakomentować dane dotyczące łączenia z postgresem i odkomentować te związane z MS SQL oraz w pliku ProjektKoncowyApplication.java odkomentować adnotację @PropertySource.
 <br>
 <br>Link do aplikacji w serwisie Heroku:
 <br>https://guarded-sea-67974.herokuapp.com/
